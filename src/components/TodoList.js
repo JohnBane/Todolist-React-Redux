@@ -23,12 +23,13 @@ const TodoList = ({ todos, addTodo }) => {
             <div className='todo-list'>
                 <form onSubmit={handleFormSubmit}>
                     <input
+                        className='todo-list_search_input'
                         type='text'
                         placeholder='Add a new Todo...'
                         value={newTodoText}
                         onChange={handleInputChange}
                     />
-                    <button type='submit'>Add</button>
+                    <button className='todo-list_add_input' type='submit'>Add</button>
                 </form>
                 {todos.map((todo) => (
                     <Todo key={todo.id} todo={todo} />
